@@ -3,6 +3,7 @@ const config = require('universal-config');
 const Unsplash = require('unsplash-js').default;
 const toJson = require('unsplash-js').toJson;
 const express = require('express');
+const path = require('path');
 
 const unsplash = new Unsplash({
     applicationId: config.get('APPLICATION_ID'),
@@ -23,7 +24,7 @@ app.get('/api/photos', (req, res)=>{
         .then(json => res.json(json));
 });
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
