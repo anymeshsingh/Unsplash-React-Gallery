@@ -13,6 +13,9 @@ const unsplash = new Unsplash({
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.get('/api/photos', (req, res)=>{
     unsplash.photos
         .listPhotos(req.query.start, req.query.count)
