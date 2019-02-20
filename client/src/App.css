@@ -1,0 +1,63 @@
+.title {
+  font-family: "Carter One";
+}
+.container {
+  margin-top: 30px;
+  text-align: center;
+  padding: 0px !important;
+  color: black;
+}
+.images {
+  width: 100%;
+}
+.single-photo {
+  width: 100%;
+}
+img{
+  width: 100%;
+}
+.text-center{
+  text-align: center;
+}
+.flex-center{
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  .single-photo {
+    width: calc(50% - 6px);
+    margin: 0 3px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  
+  .single-photo {
+    width: calc(33.33% - 6px);
+    margin: 0 3px;
+  }
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  
+  .single-photo {
+    width: calc(25% - 6px);
+    margin: 0 3px;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+  
+  .single-photo {
+    width: calc(20% - 6px);
+    margin: 0 3px;
+  }
+}
